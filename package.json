@@ -36,7 +36,7 @@
     ]
   },
   "dependencies": {
-    "vconsole": "^3.3.2"
+    "vconsole": "^3.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

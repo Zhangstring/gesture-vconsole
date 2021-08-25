@@ -11,10 +11,11 @@ var GestureVConsole = /** @class */ (function () {
     }
     GestureVConsole.prototype.init = function () {
         var _this = this;
-        this.vConsole = new VConsole();
-        this.vConsole.setOption('onReady', function () {
-            _this.vConsole.hideSwitch();
-            _this["switch"] = false;
+        this.vConsole = new VConsole({
+            onReady: function () {
+                _this.vConsole.hideSwitch();
+                _this["switch"] = false;
+            }
         });
         document.addEventListener('touchstart', this.switchVConsole.bind(this), false);
     };

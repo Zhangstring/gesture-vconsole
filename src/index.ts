@@ -14,10 +14,11 @@ class GestureVConsole {
     this.init()
   }
   init() {
-    this.vConsole = new VConsole()
-    this.vConsole.setOption('onReady', () => {
-      this.vConsole.hideSwitch()
-      this.switch = false
+    this.vConsole = new VConsole({
+      onReady: () => {
+        this.vConsole.hideSwitch()
+        this.switch = false
+      }
     })
     document.addEventListener(
       'touchstart',
